@@ -8,11 +8,15 @@ const stadiumController = require('./controllers/stadiumController.js');
 const teamController = require('./controllers/teamController.js');
 const router = require('./router.js');
 const newsController = require('./controllers/newsController.js');
+const galleryController = require('./controllers/galleryController.js');
+const contactsController = require('./controllers/contactsController.js');
 
 router.get('/',homeController)
 router.get('/team',teamController)
 router.get('/stadium',stadiumController)
 router.get('/news',newsController)
+router.get('/gallery',galleryController)
+router.get('/contact',contactsController)
 
 const port = 3000;
 const server = http.createServer(requestHandler);
