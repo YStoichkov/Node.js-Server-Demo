@@ -1,12 +1,18 @@
 const http = require('http');
+const fs = require('fs');
+const formidable = require('formidable');
+
+const storageService = require('./utils/storageService.js');
 const homeController = require('./controllers/homeController.js');
 const stadiumController = require('./controllers/stadiumController.js');
 const teamController = require('./controllers/teamController.js');
 const router = require('./router.js');
+const newsController = require('./controllers/newsController.js');
 
 router.get('/',homeController)
 router.get('/team',teamController)
 router.get('/stadium',stadiumController)
+router.get('/news',newsController)
 
 const port = 3000;
 const server = http.createServer(requestHandler);
